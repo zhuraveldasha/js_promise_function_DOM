@@ -6,7 +6,7 @@ function waitFor(element, eventName) {
       const message = `It was ${eventName} on the element: ${element.nodeName}, id: ${element.id}.`;
 
       resolve(message);
-      // element.removeEventListener(eventName, handler);
+      element.removeEventListener(eventName, handler);
     }
     element.addEventListener(eventName, handler);
   });
